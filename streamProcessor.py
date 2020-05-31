@@ -12,7 +12,7 @@ import requests
 # Send a request to the Mysfits Service API that we have created in previous
 # modules to retrieve all of the attributes for the included MysfitId.
 def retrieveMysfit(mysfitId):
-    print(mysfitId)
+    print('In retrieveMysfit, mysfitId: %s'%(str(mysfitId)))
     apiEndpoint = 'https://wl6zp2i4r8.execute-api.us-east-2.amazonaws.com/prod' + '/mysfits/' + str(mysfitId) # eg: 'https://ljqomqjzbf.execute-api.us-east-1.amazonaws.com/prod/'
     mysfit = requests.get(apiEndpoint).json()
     return mysfit
