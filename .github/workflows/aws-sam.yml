@@ -14,7 +14,7 @@ jobs:
       - name: sam deploy
         uses: TractorZoom/sam-cli-action@master
         with:
-          sam_command: "package --template-file ./real-time-streaming.yml --s3-bucket s3://video-multi-split-test-streaming-service --stack-name MythicalMysfitsStreamingStack --capabilities CAPABILITY_IAM"
+          sam_command: "deploy --template-file ./real-time-streaming.yml --s3-bucket s3://video-multi-split-test-streaming-service --stack-name MythicalMysfitsStreamingStack --capabilities CAPABILITY_IAM"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
